@@ -114,8 +114,8 @@ create_main_code() {
 	then
 		cd ./${project_name}
 		echo -e "#include <iostream>\n\n" > ./src/main.cpp
-		echo -e "int main(int argc, char *argv) {" >> ./src/main.cpp
-		echo -e "\tstd::cout << \"Hello, world!\" << std::endl" >> ./src/main.cpp
+		echo -e "int main(int argc, char **argv) {" >> ./src/main.cpp
+		echo -e "\tstd::cout << \"Hello, world!\" << std::endl;" >> ./src/main.cpp
 		echo -e "\treturn 0;" >> ./src/main.cpp
 		echo -e "}" >> ./src/main.cpp
 		cd ..
