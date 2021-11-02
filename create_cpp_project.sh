@@ -5,8 +5,7 @@
 ### instead of using an IDE for that.
 ###
 ### Author: Pedro T Freidinger (pedrotersetti3@gmail.com)
-### License: MIT
-### Version: 0.1 (25 feb. 2021)
+### License: MIT (github.com/pedroter7/useful_scripts)
 #########################################################
 
 #########################################################
