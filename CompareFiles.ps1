@@ -38,7 +38,7 @@ foreach ($file in $filesDir1) {
 	[string]$fname = $file.Name
 	
 	if (!(Test-Path -Path "$Dir2\$fname")) {
-		if ($DontIgnore {
+		if ($DontIgnore) {
 			if (!$SupressWriteHost) {
 				Write-Host "$Dir2\$fname does not exist." -foreground 'red'
 			}
