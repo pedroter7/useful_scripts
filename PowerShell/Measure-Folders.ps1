@@ -44,7 +44,7 @@ class Folder{
 }
 
 function Get-FoldersInCurrentDir([string]$currentDir) {
-    [array]$folders = Get-ChildItem -Path $currentDir -Directory -Force | Select-Object -ExpandProperty FullName
+    [array]$folders = Get-ChildItem -Path $currentDir -Directory -Force -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
     return $folders
 }
 
