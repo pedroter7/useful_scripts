@@ -1,28 +1,27 @@
 <#
 .SYNOPSIS
-    Script para remover uma classe de dentro de um .jar
+    Script to remove a class from .jar files
 
 .PARAMETER JarFilePath
-    Caminhos para arquivos .jar. Pode ser passado via pipeline
+    Path to .jar file(s)
 
 .PARAMETER Class
-    Nome da classe para ser removida
+    Name of the class to be removed
 
 .EXAMPLE
-    # Remove a classe JMSAppender de todos os .jar do log4j que
-    # o gci econtrar
+    # Removes the class JMSAppender from every log4j jar that
+    # gci finds
     Get-ChildItem -Filter log4j*.jar `
         | Select-Object -ExpandProperty FullName `
         | .\Remove-ClassFromJar -Class 'JMSAppender'
 
 .EXAMPLE
-    # Remove a classe Foo de todos os arquivos .jar em
-    # C:\Programs\lib
+    # Removes the class Foo from every .jar file in the current dir
     Get-ChildItem -Filter *.jar | Select-Object -ExpandProperty FullName `
         | .\Remove-ClassFromJar -Class "foo"
 
 .EXAMPLE
-    # Remove a classe MeuObjeto do arquivo em C:\Users\Eu\Documentos\meu.jar
+    # Removes the class MeuObjeto from C:\Users\Eu\Documentos\meu.jar
     .\Remove-ClassFromJar -JarFilePath "C:\Users\Eu\Documentos\meu.jar" `
         -Class "MeuObjeto"
 #>
