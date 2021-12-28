@@ -42,7 +42,7 @@ begin {
     $mode = [System.IO.Compression.ZipArchiveMode]::Update
 }
 process {
-    $file = $_
+    $file = $JarFilePath
     try {
         $zip = [System.IO.Compression.ZipFile]::Open("$file", $mode)
     } catch {
